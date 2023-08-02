@@ -1,0 +1,24 @@
+@use "../foundation/index" as *;
+
+
+
+.l-footer {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: $color-brown;
+  & .l-footer__inner {
+    display: grid;
+    place-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  & .l-footer__copyright {
+    color: $color-white;
+    font-size: clamp(convertRem(12), 0.543rem + 0.884vw, convertRem(20));
+    font-weight: bold;
+  }
+  @include media-query($breakpoint-pc) {
+    padding-top: 49px;
+    padding-bottom: 49px;
+  }
+}

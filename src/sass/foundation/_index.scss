@@ -1,0 +1,10 @@
+/*
+ * foundation
+*/
+// リセット, 変数, mixin, function, commonの順番
+@forward "reset";
+@forward "variable";
+@forward "color";
+@forward "mixin";
+@forward "function";
+@forward "base";

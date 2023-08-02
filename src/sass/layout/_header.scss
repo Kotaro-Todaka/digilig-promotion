@@ -1,0 +1,16 @@
+@use "../foundation/variable" as v;
+@use "../foundation/mixin" as m;
+@use "../foundation/color" as c;
+@use "../foundation/function" as f;
+
+
+
+.l-global-navigation {
+  & .l-global-navigation__text-en {
+    font-size: f.convertRem(28);
+    text-transform: uppercase;
+  }
+  & .l-global-navigation__text-ja {
+    font-size: f.convertRem(14);
+  }
+}

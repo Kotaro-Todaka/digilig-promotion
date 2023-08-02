@@ -1,0 +1,43 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    .
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Jost:wght@700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    link(rel="stylesheet", href="./asset/css/style.css")
+
+  body 
+    header.l-header
+      div.l-header__inner
+        h1.l-header__logo
+          a(href="#") 
+            img(src="./asset/images/header/site-logo.svg", alt="Digital Hollywood Studio × Lig")
+        nav.l-global-navigation
+          ul.l-global-navigation__list
+            li.l-global-navigation__item
+              a(href="#") 
+                span.l-global-navigation__text-en  About Us
+                span.l-global-navigation__text-ja  私たちについて
+            li.l-global-navigation__item
+              a(href="#") 
+                span.l-global-navigation__text-en  Features
+                span.l-global-navigation__text-ja  3つの特徴
+            li.l-global-navigation__item
+              a(href="#") 
+                span.l-global-navigation__text-en  Question
+                span.l-global-navigation__text-ja  よくある質問
+            li.l-global-navigation__item
+              a(href="#") 
+                span.l-global-navigation__text-en  Contact
+                span.l-global-navigation__text-ja  お問い合わせ
+        button.l-header__hamburger(type="button") 
+          span
+      div 
+    main 
+    footer.l-footer
+      div.l-footer__inner
+        small.l-footer__copyright © LIG Inc. All rights Reserved

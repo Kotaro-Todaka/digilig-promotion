@@ -1,0 +1,28 @@
+/* @mixin */
+// メディアクエリ設定
+@mixin media-query($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+// absolute: 中央揃え
+@mixin center-position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// flex: 中央揃え
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// grid: 中央揃え
+@mixin grid-center {
+  display: grid;
+  place-items: center center;
+}

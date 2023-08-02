@@ -1,0 +1,8 @@
+/*
+ * layout
+*/
+// footer, header, main, sidebar の順
+@use "footer";
+@use "header";
+@use "main";
+// @use "sidebar";（あれば）

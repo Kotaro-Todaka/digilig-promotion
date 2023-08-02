@@ -1,0 +1,17 @@
+@use "./variable" as v;
+@use "./mixin" as m;
+@use "./color" as c;
+@use "./function" as f;
+
+
+// @include m.media-query(v.$breakpoint-pc) {
+//   background-color: c.$color-yellow;
+// }
+
+
+body {
+  font-family: 'Jost', 'Noto Sans JP', sans-serif;
+  font-weight: normal;
+  background-color: c.$color-light-gray;
+  color: c.$color-black;
+}
