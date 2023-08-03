@@ -54,42 +54,57 @@ SassとFLOCSS設計手法を採用。
 
 #### @useの読み込み順番
 ■ style.scss
+```scss
 @use "global";
 @use "foundation";
 @use "layout";
 @use "object";
+```
 
 ■ global内の_index.scss
+```scss
 @forward "variable";
 @forward "color";
 @forward "mixin";
 @forward "function";
+```
 
 ■ foundation内の_index.scss
+```scss
 @use "reset";
 @use "base";
+```
 
 ■ layout内の_index.scss
+```scss
 @use "footer";
 @use "header";
 @use "main";
+```
 
 ■ object内の_index.scss
+```scss
 @use "component";
 @use "project";
 @use "utility";
+```
 
 ■ component内の_index.scss
+```scss
 @use "button";
+```
 
 ■ project内の_index.scss
+```scss
 @use "home";
 @use "form";
+```
 
 ■ utility内の_index.scss
 
 
 ### ディレクトリ構成
+```
 .
 ├── dist/
 │   └── asset/
@@ -134,3 +149,4 @@ SassとFLOCSS設計手法を採用。
 ├── package.json
 ├── postcss.config.cjs
 └── READ ME.md
+```
