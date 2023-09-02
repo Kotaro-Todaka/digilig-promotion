@@ -11,20 +11,131 @@
   <body> 
     <header class="l-header">
       <div class="l-header__inner">
-        <h1 class="l-header__logo"><a href="#"> <img src="./asset/images/header/site-logo.svg" alt="Digital Hollywood Studio × Lig"></a></h1>
-        <nav class="l-global-navigation">
+        <h1 class="l-header__logo"><a href="#"> <img src="./asset/images/header/site-logo.svg" alt="Digital Hollywood Studio × Lig" width="190px" height="auto"></a></h1>
+        <nav class="l-global-navigation" id="global-navigation">
           <ul class="l-global-navigation__list">
-            <li class="l-global-navigation__item"><a href="#"> <span class="l-global-navigation__text-en"> About Us</span><span class="l-global-navigation__text-ja"> 私たちについて</span></a></li>
-            <li class="l-global-navigation__item"><a href="#"> <span class="l-global-navigation__text-en"> Features</span><span class="l-global-navigation__text-ja"> 3つの特徴</span></a></li>
-            <li class="l-global-navigation__item"><a href="#"> <span class="l-global-navigation__text-en"> Question</span><span class="l-global-navigation__text-ja"> よくある質問</span></a></li>
-            <li class="l-global-navigation__item"><a href="#"> <span class="l-global-navigation__text-en"> Contact</span><span class="l-global-navigation__text-ja"> お問い合わせ</span></a></li>
+            <li class="l-global-navigation__item"><a class="l-global-navigation__link" href="#"><span class="l-global-navigation__text--en"> About Us</span><span class="l-global-navigation__text--ja"> デジLigについて</span></a></li>
+            <li class="l-global-navigation__item"><a class="l-global-navigation__link" href="#"><span class="l-global-navigation__text--en"> Features</span><span class="l-global-navigation__text--ja"> 3つの特徴</span></a></li>
+            <li class="l-global-navigation__item"><a class="l-global-navigation__link" href="#"><span class="l-global-navigation__text--en"> Question</span><span class="l-global-navigation__text--ja"> よくある質問</span></a></li>
+            <li class="l-global-navigation__item"><a class="l-global-navigation__link p-contact__button c-button" href="#"><span class="l-global-navigation__text--en p-contact__button--en"> Contact</span><span class="l-global-navigation__text--ja p-contact__button--ja"> お問い合わせ</span></a></li>
           </ul>
         </nav>
-        <button class="l-header__hamburger" type="button"> <span></span></button>
+        <button class="l-header__hamburger" type="button" id="js-hamburger" aria-controls="global-navigation" aria-expanded="false" aria-label="ナビゲーションメニューを開閉する"><span class="l-header__hamburger-line"></span></button>
       </div>
-      <div> </div>
     </header>
-    <main> </main>
+    <main>
+      <section class="p-firstView">
+        <div class="p-firstView__inner">
+          <div class="p-firstView__"></div>
+        </div>
+      </section>
+      <section class="p-about">
+        <div class="p-about__inner"></div>
+      </section>
+      <section class="p-features">
+        <div class="p-features__inner">
+          <div>
+            <figure><img src="" alt=""></figure>
+            <div class="p-features__description">
+              <h2><span>Features </span><span>デジLigの魅力を知る</span></h2>
+              <h3>選ばれる<br>3つの特徴</h3>
+              <p>Webクリエイターに必要なスキルを身につけて実務で活躍するため、効率的に学べるカリキュラム。<br>ソフトを触ったことがない初心者でも、確実にステップアップするためにデジLIGのサポート体制があります。</p>
+            </div>
+          </div>
+          <div>
+            <h4><span>未経験</span>からでも安心のサポートシステム</h4>
+            <ol>
+              <li>
+                <p>01</p>
+                <figure><img src="" alt=""></figure>
+                <p>現役クリエイターの<br>直接指導</p>
+                <p>Webクリエイターに必要な<br>ポートフォリオを重点的に添削。</p>
+              </li>
+              <li>
+                <p>02</p>
+                <figure><img src="" alt=""></figure>
+                <p>最新技術を知る<br>Live授業</p>
+                <p>最新のクリエイター人材市場を知り転職を目指して有意義に過ごす。</p>
+              </li>
+              <li>
+                <p>03</p>
+                <figure><img src="" alt=""></figure>
+                <p>手厚い<br>転職サポート</p>
+                <p>LIGが実際に行っている仕事の「社内制作課題コンペ」も開催。</p>
+              </li>
+            </ol>
+          </div>
+          <div>
+            <h4><span>Flow</span>デジLig学習の一連の流れ</h4>
+            <ol>
+              <li>
+                <p>01</p>
+                <figure><img src="" alt=""></figure>
+                <p>入学説明会</p>
+              </li>
+              <li>
+                <p>02</p>
+                <figure><img src="" alt=""></figure>
+                <p>受講期間</p>
+              </li>
+              <li>
+                <p>03</p>
+                <figure><img src="" alt=""></figure>
+                <p>卒業制作期間</p>
+              </li>
+              <li>
+                <p>04</p>
+                <figure><img src="" alt=""></figure>
+                <p>発表会・卒業後</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <section class="p-questions">
+        <div class="p-questions__inner">
+          <h2 id="tablist-label"><span>Questions</span><span><span>よくお寄せいただくご質問と</span><span>回答をご紹介します。</span></span></h2>
+          <div class="p-tab__list" role="tablist" aria-labelledby="tablist-label">
+            <button class="p-tab__button is-active js-tab" id="tab-study" type="button" role="tab" aria-controls="tabpanel-study" aria-selected="true" tabindex="0"><span class="p-tab__text">学習・料金について</span></button>
+            <button class="p-tab__button js-tab" id="tab-service" type="button" role="tab" aria-controls="tabpanel-service" aria-selected="false" tabindex="-1"><span class="p-tab__text">サービス・制作について</span></button>
+            <button class="p-tab__button js-tab" id="tab-aftercare" type="button" role="tab" aria-controls="tabpanel-aftercare" aria-selected="false" tabindex="-1"><span class="p-tab__text">卒業後について</span></button>
+          </div>
+          <div class="p-tab__panel js-tab-panel" id="tabpanel-study" role="tabpanel" aria-labelledby="tab-study" tabindex="0">
+            <ul>
+              <li>
+                <p>未経験でついていけるか不安です。</p>
+                <p>未経験の方を前提としたカリキュラムをご用意していますので、心配ございません。<br>初心者の方でも基礎からしっかりと学べます。分からない箇所はトレーナーがマンツーマンで教えてくれるため、進捗にあわせた対応が可能です。</p>
+              </li>
+              <li>
+                <p>働きながらでも通えますか？</p>
+                <p>場所や時間を選ばず学べる映像教材や、好きな時間に校舎の予約ができるので、それぞれのライフスタイルに合わせて通学が可能です。<br>トレーナーへの質問もオンラインで行える体制が整っているため、通学しないときでも気軽に学習の相談をしていただけます。</p>
+              </li>
+              <li>
+                <p>料金の分割払いは可能ですか？</p>
+                <p>コース問わず可能です。<br>詳細については、個別説明会もしくは電話問い合わせにてご質問ください。</p>
+              </li>
+              <li>
+                <p>パソコンやソフトの準備がなくても大丈夫でしょうか？</p>
+                <p>受講期間中はスタジオのパソコンおよびソフトを自由にご利用いただけるため、パソコンなどがなくても受講可能です。<br>完全オンラインでの学習をご検討している場合は、学習環境を整えていただく必要がございます。</p>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>こちらに記載の無い内容についても、お気軽にお問い合わせください。<br>ご導入を本格的にご検討の方から情報収集段階の方まで、幅広くお問い合わせをいただいております。</p>
+            <figure><img src="" alt=""></figure>
+          </div>
+        </div>
+      </section>
+      <section class="p-contact">
+        <div class="p-contact__inner">
+          <h2>次の一歩を踏み出すなら、<br>デジLIG。</h2>
+          <p>専門担当者があなたの疑問や不安にお答えします。<br>お気軽にご相談くださいませ。</p>
+          <div>
+            <p>オンライン対応しております</p><a href="#"><span><span>Contact</span><span>お問い合わせ</span></span></a>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer class="l-footer">
       <div class="l-footer__inner"><small class="l-footer__copyright">© LIG Inc. All rights Reserved</small></div>
     </footer>
