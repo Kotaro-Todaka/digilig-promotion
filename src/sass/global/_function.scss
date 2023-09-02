@@ -1,5 +1,5 @@
 /* function */
 // [px]→[rem]
 @function convertRem($target-font-size) {
-  @return ($target-font-size/16) + rem;
+  @return calc($target-font-size/16) + rem;
 }

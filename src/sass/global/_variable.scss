@@ -1,0 +1,31 @@
+/* color */
+// 色名は「$color-トーン-色」で統一
+
+/* 無彩色 */ 
+$color--white: #fff;
+$color--light-gray: #ccc;
+$color--medium-gray: #999;
+$color--dark-gray: #242424;
+$color--black: #000;
+
+/* 有彩色 */
+$color--light-yellow: #FFEE55;
+$color--brown: #6B2900;
+$color--vivid-orange: #DE5600;
+$color--deep-blue: #0066A1;
+
+/* transparent */
+$transparent-color--black: rgba(0,0,0,0.2);
+
+/* breakpoint */
+$breakpoint-tablet: 768px;
+$breakpoint-pc: 1024px;
+
+/* z-index */
+$z-index--navigation: 5;
+$z-index--header: 10;
+$z-index--button: 50;
+
+/* font */
+$font-family: 'Jost', 'Noto Sans JP', sans-serif;
+

@@ -1,7 +1,4 @@
 @charset "UTF-8";
-/*
- * foundation
-*/
 /* h1タグだろうと、pタグだろうと、全部共通の大きさに設定されるリセットCSS */
 /* すべての大きさが同じになるため、細かいスタイリングの手間が増える。そのかわり、各タグの大きさ調整が柔軟に対応できるのが特徴！ */
 /* 解説：https://zenn.dev/yurukei20/articles/ffdbde17cd0853 */
@@ -383,11 +380,13 @@ th {
   font-weight: bold;
 }
 
-/* breakpoint */
-/* z-index */
 /* color */
 /* 無彩色 */
 /* 有彩色 */
+/* transparent */
+/* breakpoint */
+/* z-index */
+/* font */
 /* @mixin */
 /* function */
 body {
@@ -423,12 +422,165 @@ body {
   }
 }
 
-.l-global-navigation .l-global-navigation__text-en {
-  font-size: 1.75rem;
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 14px;
+  z-index: 10;
+}
+
+.l-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.l-header__logo {
+  position: relative;
+  width: 190px;
+  height: auto;
+  z-index: 50;
+}
+.l-header__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.l-global-navigation {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 5;
+  transform: translateY(-100%);
+}
+
+.l-global-navigation__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 145px 24px 60px;
+  border-radius: 20px;
+  background-color: #DE5600;
+}
+
+.l-global-navigation__item {
+  width: 100%;
+}
+.l-global-navigation__item:not(:last-of-type) {
+  margin-bottom: 40px;
+}
+.l-global-navigation__item:nth-last-of-type(2) {
+  margin-bottom: 50px;
+}
+
+.l-global-navigation__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: fit-content;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0 auto;
+}
+.l-global-navigation__link span {
+  color: #fff;
   text-transform: uppercase;
 }
-.l-global-navigation .l-global-navigation__text-ja {
-  font-size: 0.875rem;
+
+.l-global-navigation__text--en {
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+}
+
+.l-global-navigation__text--ja {
+  font-size: 0.75rem;
+}
+
+.c-button {
+  border-radius: 100px;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.l-header__hamburger {
+  position: relative;
+  background-color: #DE5600;
+  width: 40px;
+  height: 40px;
+  padding: 15px 10px;
+  border-radius: 50%;
+  z-index: 50;
+}
+
+.l-header__hamburger-line::before, .l-header__hamburger-line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.l-header__hamburger-line::before {
+  transform: translateY(-5px);
+}
+.l-header__hamburger-line::after {
+  transform: translateY(5px);
+}
+
+.l-header__hamburger.is-active .l-header__hamburger-line::before {
+  transform: translateY(0px) rotate(45deg);
+}
+.l-header__hamburger.is-active .l-header__hamburger-line::after {
+  transform: translateY(0px) rotate(-45deg);
+}
+
+.l-global-navigation.is-active {
+  transform: translateY(0);
+}
+
+.p-contact__button {
+  position: relative;
+  width: 100%;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background-color: #FFEE55;
+}
+.p-contact__button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 10px;
+  background-color: #0066A1;
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
+}
+.p-contact__button span {
+  font-weight: bold;
+  color: #0066A1;
+}
+
+.p-contact__button--en {
+  letter-spacing: 0.1em;
+}
+
+.p-contact__button--ja {
+  letter-spacing: 0.07em;
 }
 
 /*

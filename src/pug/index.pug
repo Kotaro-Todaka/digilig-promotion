@@ -15,29 +15,176 @@ html(lang="ja")
       div.l-header__inner
         h1.l-header__logo
           a(href="#") 
-            img(src="./asset/images/header/site-logo.svg", alt="Digital Hollywood Studio × Lig")
-        nav.l-global-navigation
+            img(src="./asset/images/header/site-logo.svg", alt="Digital Hollywood Studio × Lig", width="190px", height="auto")
+        nav#global-navigation.l-global-navigation
           ul.l-global-navigation__list
             li.l-global-navigation__item
-              a(href="#") 
-                span.l-global-navigation__text-en  About Us
-                span.l-global-navigation__text-ja  私たちについて
+              a(href="#").l-global-navigation__link
+                span.l-global-navigation__text--en  About Us
+                span.l-global-navigation__text--ja  デジLigについて
             li.l-global-navigation__item
-              a(href="#") 
-                span.l-global-navigation__text-en  Features
-                span.l-global-navigation__text-ja  3つの特徴
+              a(href="#").l-global-navigation__link
+                span.l-global-navigation__text--en  Features
+                span.l-global-navigation__text--ja  3つの特徴
             li.l-global-navigation__item
-              a(href="#") 
-                span.l-global-navigation__text-en  Question
-                span.l-global-navigation__text-ja  よくある質問
+              a(href="#").l-global-navigation__link
+                span.l-global-navigation__text--en  Question
+                span.l-global-navigation__text--ja  よくある質問
             li.l-global-navigation__item
-              a(href="#") 
-                span.l-global-navigation__text-en  Contact
-                span.l-global-navigation__text-ja  お問い合わせ
-        button.l-header__hamburger(type="button") 
-          span
-      div 
-    main 
+              a(href="#").l-global-navigation__link.p-contact__button.c-button
+                span.l-global-navigation__text--en.p-contact__button--en  Contact
+                span.l-global-navigation__text--ja.p-contact__button--ja  お問い合わせ
+        button(type="button")#js-hamburger.l-header__hamburger(aria-controls="global-navigation")(aria-expanded="false")(aria-label="ナビゲーションメニューを開閉する")
+          span.l-header__hamburger-line
+    main
+      section.p-firstView
+        div.p-firstView__inner
+          div.p-firstView__
+      section.p-about
+        div.p-about__inner
+      section.p-features
+        div.p-features__inner
+          div
+            figure
+              img(src="", alt="")
+            div.p-features__description
+              h2
+                span Features 
+                span デジLigの魅力を知る
+              h3
+                |選ばれる
+                br
+                |3つの特徴
+              p
+                |Webクリエイターに必要なスキルを身につけて実務で活躍するため、効率的に学べるカリキュラム。
+                br
+                |ソフトを触ったことがない初心者でも、確実にステップアップするためにデジLIGのサポート体制があります。
+          div
+            h4
+              span 未経験
+              |からでも安心のサポートシステム
+            ol
+              li
+                p 01
+                figure
+                  img(src="", alt="")
+                p
+                  |現役クリエイターの
+                  br
+                  |直接指導
+                p
+                  |Webクリエイターに必要な
+                  br
+                  |ポートフォリオを重点的に添削。
+              li
+                p 02
+                figure
+                  img(src="", alt="")
+                p
+                  |最新技術を知る
+                  br
+                  |Live授業
+                p
+                  |最新のクリエイター人材市場を知り転職を目指して有意義に過ごす。
+              li
+                p 03
+                figure
+                  img(src="", alt="")
+                p
+                  |手厚い
+                  br
+                  |転職サポート
+                p
+                  |LIGが実際に行っている仕事の「社内制作課題コンペ」も開催。
+          div
+            h4
+              span Flow
+              |デジLig学習の一連の流れ
+            ol
+              li
+                p 01
+                figure
+                  img(src="", alt="")
+                p 入学説明会
+              li
+                p 02
+                figure
+                  img(src="", alt="")
+                p 受講期間
+              li
+                p 03
+                figure
+                  img(src="", alt="")
+                p 卒業制作期間
+              li
+                p 04
+                figure
+                  img(src="", alt="")
+                p 発表会・卒業後
+
+      section.p-questions
+        div.p-questions__inner
+          h2#tablist-label
+            span Questions
+            span
+              span よくお寄せいただくご質問と
+              span 回答をご紹介します。
+          div.p-tab__list(role="tablist")(aria-labelledby="tablist-label")
+            button#tab-study.p-tab__button.is-active.js-tab(type="button")(role="tab")(aria-controls="tabpanel-study")(aria-selected="true")(tabindex="0")
+              span.p-tab__text 学習・料金について
+            button#tab-service.p-tab__button.js-tab(type="button")(role="tab")(aria-controls="tabpanel-service")(aria-selected="false")(tabindex="-1")
+              span.p-tab__text サービス・制作について
+            button#tab-aftercare.p-tab__button.js-tab(type="button")(role="tab")(aria-controls="tabpanel-aftercare")(aria-selected="false")(tabindex="-1")
+              span.p-tab__text 卒業後について
+          div#tabpanel-study.p-tab__panel.js-tab-panel(role="tabpanel")(aria-labelledby="tab-study")(tabindex="0")
+            ul
+              li
+                p 未経験でついていけるか不安です。
+                p
+                  |未経験の方を前提としたカリキュラムをご用意していますので、心配ございません。
+                  br
+                  |初心者の方でも基礎からしっかりと学べます。分からない箇所はトレーナーがマンツーマンで教えてくれるため、進捗にあわせた対応が可能です。
+              li
+                p 働きながらでも通えますか？
+                p
+                  |場所や時間を選ばず学べる映像教材や、好きな時間に校舎の予約ができるので、それぞれのライフスタイルに合わせて通学が可能です。
+                  br
+                  |トレーナーへの質問もオンラインで行える体制が整っているため、通学しないときでも気軽に学習の相談をしていただけます。
+              li
+                p 料金の分割払いは可能ですか？
+                p
+                  |コース問わず可能です。
+                  br
+                  |詳細については、個別説明会もしくは電話問い合わせにてご質問ください。
+              li
+                p パソコンやソフトの準備がなくても大丈夫でしょうか？
+                p
+                  |受講期間中はスタジオのパソコンおよびソフトを自由にご利用いただけるため、パソコンなどがなくても受講可能です。
+                  br
+                  |完全オンラインでの学習をご検討している場合は、学習環境を整えていただく必要がございます。
+          div
+            p
+              |こちらに記載の無い内容についても、お気軽にお問い合わせください。
+              br
+              |ご導入を本格的にご検討の方から情報収集段階の方まで、幅広くお問い合わせをいただいております。
+            figure
+              img(src="", alt="")
+      section.p-contact
+        div.p-contact__inner
+          h2
+            |次の一歩を踏み出すなら、
+            br
+            |デジLIG。
+          p
+            |専門担当者があなたの疑問や不安にお答えします。
+            br
+            |お気軽にご相談くださいませ。
+          div
+            p オンライン対応しております
+            a(href="#")
+              span
+                span Contact
+                span お問い合わせ
     footer.l-footer
       div.l-footer__inner
         small.l-footer__copyright © LIG Inc. All rights Reserved

@@ -1,16 +1,179 @@
-@use "../foundation/variable" as v;
-@use "../foundation/mixin" as m;
-@use "../foundation/color" as c;
-@use "../foundation/function" as f;
+@use "../global" as *;
 
+// header position
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 14px;
+  z-index: $z-index--header;
+}
 
+// header inner
+.l-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+// logo
+.l-header__logo {
+  position: relative;
+  width: 190px;
+  height: auto;
+  z-index: $z-index--button;
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+// navigation
 .l-global-navigation {
-  & .l-global-navigation__text-en {
-    font-size: f.convertRem(28);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $transparent-color--black;
+  z-index: $z-index--navigation;
+  transform: translateY(-100%);
+}
+
+.l-global-navigation__list {
+  @include flex-center;
+  flex-direction: column;
+  padding: 145px 24px 60px;
+  border-radius: 20px;
+  background-color: $color--vivid-orange;
+}
+
+.l-global-navigation__item {
+  width: 100%;
+  &:not(:last-of-type) {
+    margin-bottom: 40px;
+  }
+  &:nth-last-of-type(2) {
+    margin-bottom: 50px;
+  }
+}
+
+// navigation link
+.l-global-navigation__link {
+  @include flex-center;
+  flex-direction: column;
+  width: fit-content;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0 auto;
+
+  & span {
+    color: $color--white;
     text-transform: uppercase;
   }
-  & .l-global-navigation__text-ja {
-    font-size: f.convertRem(14);
+}
+
+// navigation text
+.l-global-navigation__text--en {
+  margin-bottom: 8px;
+  font-size: convertRem(24);
+  font-weight: bold;
+  letter-spacing: .03em;
+}
+
+.l-global-navigation__text--ja {
+  font-size: convertRem(12);
+}
+
+// link button
+.c-button {
+  border-radius: 100px;
+  box-shadow: 0 10px 10px 0 $transparent-color--black;
+}
+
+
+// hamburger button
+.l-header__hamburger {
+  position: relative;
+  background-color: $color--vivid-orange;
+  width: 40px;
+  height: 40px;
+  padding: 15px 10px;
+  border-radius: 50%;
+  z-index: $z-index--button;
+}
+
+.l-header__hamburger-line {
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 20px;
+    height: 2px;
+    background-color: $color--white;
+    transition: transform .3s cubic-bezier(0.22, 1, 0.36, 1);
   }
+  &::before {
+    transform: translateY(-5px);
+  }
+  &::after {
+    transform: translateY(5px);
+  }
+}
+
+// click
+.l-header__hamburger.is-active {
+  .l-header__hamburger-line {
+    &::before {
+      transform: translateY(0px) rotate(45deg);
+    }
+    &::after {
+      transform: translateY(0px) rotate(-45deg);
+    }
+  }
+}
+
+.l-global-navigation.is-active {
+  transform: translateY(0);
+}
+
+// conversion button
+.p-contact__button {
+  position: relative;
+  width: 100%;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background-color: $color--light-yellow;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+
+    width: 8px;
+    height: 10px;
+    background-color: $color--deep-blue;
+    clip-path: polygon(0 0, 0 100%, 100% 50%);
+  }
+
+  & span {
+    font-weight: bold;
+    color: $color--deep-blue;
+  }
+}
+
+.p-contact__button--en {
+  letter-spacing: .1em;
+}
+
+.p-contact__button--ja {
+  letter-spacing: .07em;
 }
