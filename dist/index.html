@@ -3,12 +3,25 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title><link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>デジタルハリウッドStudio × Lig プロモーションサイト </title><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./asset/css/style.css">
+    <script type="module" src="./asset/js/main.js"> </script>
   </head>
-  <body> 
+  <body>
+    <svg aria-hidden="true" style="display: none" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="loupe-icon" viewBox="0 0 36 36" fill="#FFF" xmlns="http://www.w3.org/2000/svg">
+        <path d="m12.127,0c6.698-.002,12.129,5.426,12.131,12.123v.004c.002,6.698-5.426,12.129-12.123,12.131h-.008C5.43,24.258,0,18.828,0,12.131c0-.001,0-.003,0-.004C0,5.429,5.43,0,12.127,0Zm0,22.294c5.613,0,10.163-4.55,10.163-10.163,0-5.613-4.55-10.163-10.163-10.163-5.611,0-10.161,4.548-10.163,10.159.004,5.612,4.551,10.16,10.163,10.167Z"></path>
+        <path d="m20.673,22.218l1.545-1.545c.702-.701,1.839-.701,2.542,0l10.715,10.715c.701.702.701,1.839,0,2.542l-1.545,1.545c-.702.701-1.839.701-2.542,0l-10.715-10.715c-.701-.702-.701-1.839,0-2.542Zm2.816-.038l-1.309,1.309,10.479,10.479,1.309-1.309-10.479-10.479Z"></path>
+        <path d="m21.473,22.899l-2.455-2.455,1.39-1.388,2.455,2.455-1.39,1.388Z"></path>
+      </symbol>
+      <symbol id="copy-bg" viewBox="0 0 386 135" xmlns="http://www.w3.org/2000/svg">
+        <path d="m.104.259h385.896v134.741H.104V.259Z"></path>
+        <path d="m.025,66.064c10.983,56.621,116.079,68.599,173.439,43.836,49.424-20.548,100.235-101.841-9.152-101.37C54.925,9-1.351-18.412.025,66.064Z"></path>
+        <path d="m342.944.063c-23.761-.878-59.388,7.166-52.449,37.934s-75.787,26.867-73.939,48.226c1.848,21.359,47.539,42.747,91.541,20.618,44.003-22.129,77.799-37.934,77.444-65.33S366.705.943,342.944.063Z"></path>
+      </symbol>
+    </svg>
     <header class="l-header">
       <div class="l-header__inner">
         <h1 class="l-header__logo"><a href="#"> <img src="./asset/images/header/site-logo.svg" alt="Digital Hollywood Studio × Lig" width="190px" height="auto"></a></h1>
@@ -17,17 +30,23 @@
             <li class="l-global-navigation__item"><a class="l-global-navigation__link" href="#"><span class="l-global-navigation__text--en"> About Us</span><span class="l-global-navigation__text--ja"> デジLigについて</span></a></li>
             <li class="l-global-navigation__item"><a class="l-global-navigation__link" href="#"><span class="l-global-navigation__text--en"> Features</span><span class="l-global-navigation__text--ja"> 3つの特徴</span></a></li>
             <li class="l-global-navigation__item"><a class="l-global-navigation__link" href="#"><span class="l-global-navigation__text--en"> Question</span><span class="l-global-navigation__text--ja"> よくある質問</span></a></li>
-            <li class="l-global-navigation__item"><a class="l-global-navigation__link p-contact__button c-button" href="#"><span class="l-global-navigation__text--en p-contact__button--en"> Contact</span><span class="l-global-navigation__text--ja p-contact__button--ja"> お問い合わせ</span></a></li>
+            <li class="l-global-navigation__item"><a class="l-global-navigation__link p-contact__button c-button" href="#"><span class="l-global-navigation__text--en p-contact__text--en"> Contact</span><span class="l-global-navigation__text--ja p-contact__text--ja"> お問い合わせ</span></a></li>
           </ul>
         </nav>
-        <button class="l-header__hamburger" type="button" id="js-hamburger" aria-controls="global-navigation" aria-expanded="false" aria-label="ナビゲーションメニューを開閉する"><span class="l-header__hamburger-line"></span></button>
+        <button class="l-header__hamburger" id="js-hamburger" type="button" aria-controls="global-navigation" aria-expanded="false" aria-label="ナビゲーションメニューを開閉する"><span class="l-header__hamburger-line"></span></button>
       </div>
     </header>
     <main>
       <section class="p-firstView">
-        <div class="p-firstView__inner">
-          <div class="p-firstView__"></div>
+        <div class="p-firstView__textArea">
+          <h2 class="p-firstView__title"><strong>一緒に一歩<br>踏み出そう。</strong></h2>
+          <p class="p-firstView__description">上野・池袋・大宮の<br>Webクリエイター育成スクール</p>
+          <div class="p-firstView__button-wrapper"><a class="c-button p-firstView__button" href="#">
+              <svg viewBox="0 0 36.655 36.656" role="img" width="27px">
+                <use href="#loupe-icon"></use>
+              </svg><span class="p-firstView__buttonText">個別説明会を予約する</span></a></div>
         </div>
+        <div class="p-firstView__imageArea"></div>
       </section>
       <section class="p-about">
         <div class="p-about__inner"></div>
@@ -37,7 +56,7 @@
           <div>
             <figure><img src="" alt=""></figure>
             <div class="p-features__description">
-              <h2><span>Features </span><span>デジLigの魅力を知る</span></h2>
+              <h2 class="c-title"><span class="c-title__text--en">Features </span><span class="c-title__text--ja">デジLigの魅力を知る</span></h2>
               <h3>選ばれる<br>3つの特徴</h3>
               <p>Webクリエイターに必要なスキルを身につけて実務で活躍するため、効率的に学べるカリキュラム。<br>ソフトを触ったことがない初心者でも、確実にステップアップするためにデジLIGのサポート体制があります。</p>
             </div>
@@ -94,7 +113,7 @@
       </section>
       <section class="p-questions">
         <div class="p-questions__inner">
-          <h2 id="tablist-label"><span>Questions</span><span><span>よくお寄せいただくご質問と</span><span>回答をご紹介します。</span></span></h2>
+          <h2 class="c-title" id="tablist-label"><span class="c-title__text--en">Questions</span><span class="c-title__text--ja"><span>よくお寄せいただくご質問と</span><span>回答をご紹介します。</span></span></h2>
           <div class="p-tab__list" role="tablist" aria-labelledby="tablist-label">
             <button class="p-tab__button is-active js-tab" id="tab-study" type="button" role="tab" aria-controls="tabpanel-study" aria-selected="true" tabindex="0"><span class="p-tab__text">学習・料金について</span></button>
             <button class="p-tab__button js-tab" id="tab-service" type="button" role="tab" aria-controls="tabpanel-service" aria-selected="false" tabindex="-1"><span class="p-tab__text">サービス・制作について</span></button>
