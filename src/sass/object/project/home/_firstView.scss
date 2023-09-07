@@ -1,0 +1,52 @@
+@use "../../../global" as *;
+
+.p-firstView__title {
+  font-size: convertRem(48);
+  letter-spacing: .12em;
+  line-height: 1.5;
+  text-align: center;
+  & strong {
+    font-weight: 700;
+  }
+}
+
+.p-firstView__description {
+  font-size: convertRem(14);
+  font-weight: 500;
+  letter-spacing: .26em;
+  line-height: 2;
+  text-align: center;
+}
+
+.p-firstView__button-wrapper {
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.p-firstView__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 27px;
+  background-color: $color--vivid-orange;
+  position: relative;
+  & svg {
+    margin-left: 10px;
+  }
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 11px;
+    background-color: #fff;
+    clip-path: polygon(0 0, 0 100%, 100% 50%);
+  }
+}
+
+.p-firstView__button-text {
+  padding-left: 13px;
+  color: $color--white;
+  font-size: convertRem(14);
+  font-weight: bold;
+  letter-spacing: .13em;
+}
